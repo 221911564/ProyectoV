@@ -44,7 +44,14 @@
                                     Pequeño
                                 @endif
                             </h3>
-                            <td style="border: 2px solid #28a7e9"><h4><a href="{{ route('editarp', ['id' => $prod->id_producto]) }}">Editar</a></h4></td>
+                            <td style="border: 2px solid #28a7e9"><h4>
+                                <a href="{{ route('editarp', ['id' => $prod->id_producto]) }}">Editar</a></h4>
+                                <form action="{{ route('borrarp', ['id' => $prod->id_producto]) }}" method="GET" name="borrar">
+                                    {{ csrf_field() }}
+                                    {{ method_field('DELETE') }}
+					                <input type="submit" class="form-control" value="Borrar" style="border: solid #28a7e9">
+				                </form>
+                            </td>
                         </tr>
                     </tbody>
                     @endforeach

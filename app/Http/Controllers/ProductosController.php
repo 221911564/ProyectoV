@@ -13,13 +13,13 @@ class ProductosController extends Controller{
     public function producto(){
         $prods = ProductosModel::all();
 
-        return view("content.productos")
+        return view("productos.productos")
             ->with(['prods' => $prods]);
     }
 
     // AGREGAR PRODUCTO
     public function nuevo(){
-        return view("content.agregar_producto");
+        return view("productos.agregar_producto");
     }
     
     public function guardar(ValidarProductoRequest $request){
@@ -30,23 +30,21 @@ class ProductosController extends Controller{
         $ldate = date('Ymd_His_');
         $img2 = $ldate . $img; 
 
-        \Storage::disk('local')->put($img2, \File::get($file)); 
-        $usu = ProductosModel::create(array(
-            'id_tam' => $request->input('id_tam'),
-            'nombre' => $request->input('nombre'),
-            'precio' => $request->input('precio'),
-            'tamaño' => $request->input('tamaño'),
-            'img'    => $img2
-        ));
-           
-            return redirect()->route('producto');
-
-        }
-
-
+    \Storage::disk('local')->put($img2, \File::get($file)); 
+    $usu = ProductosModel::create(array(
+        'id_tam' => $request->input('id_tam'),
+        'nombre' => $request->input('nombre'),
+        'precio' => $request->input('precio'),
+        'tamaño' => $request->input('tamaño'),
+        'img'    => $img2
+    ));
+       
+        return redirect()->route('producto');
+    }
+    
     //EDITAR PRODUCTO
     public function editar(ProductosModel $id){
-        return view("content.editar_producto")
+        return view("productos.editar_producto")
             ->with(['prod' => $id]);
     }
     public function salvar(ProductosModel $id, Request $request){
@@ -74,5 +72,12 @@ class ProductosController extends Controller{
         
         return redirect()->route("producto");
        
+    }
+
+
+    //BORRAR PRODUCTO
+    public function borrar(ProductosModel $id){
+        $id->delete();
+        return redirect()->route('producto');
     }
 }

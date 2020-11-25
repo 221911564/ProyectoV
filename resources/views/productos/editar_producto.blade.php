@@ -4,7 +4,7 @@
 	<section id="contact">
 		<div class="container">
 			<div class="col-md-12">
-				<h2 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s">Edita tu <span> producto</span>
+				<h2 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s">Edita el <span> producto</span>
 				</h2>
 			</div>
 			<div class="align-self-xl-center" data-wow-offset="50" data-wow-delay="0.9s">
@@ -19,10 +19,22 @@
 					<input type="file" name="img1" class="form-control">
                     <input type="text" name="img2" value="{{ $prod->img }}" class="form-control"><br>
 					<label>TAMAÑO:</label><br>
-					Grande<input type="radio" name="tamaño" value = "1">
-					Mediano<input type="radio" name="tamaño" value = "2">
-					Pequeño<input type="radio" name="tamaño" value = "3">
-					<br><br>
+					@if($prod->tamaño == 1)
+						Grande <input type="radio" name="tamaño" value = "1" checked>
+						Mediano<input type="radio" name="tamaño" value = "2">
+						Pequeño<input type="radio" name="tamaño" value = "3">
+						<br><br>
+					@elseif($prod->tamaño == 2)
+						Grande <input type="radio" name="tamaño" value = "1">
+						Mediano<input type="radio" name="tamaño" value = "2" checked>
+						Pequeño<input type="radio" name="tamaño" value = "3">
+						<br><br>
+					@elseif($prod->tamaño ==3)
+						Grande <input type="radio" name="tamaño" value = "1">
+						Mediano<input type="radio" name="tamaño" value = "2">
+						Pequeño<input type="radio" name="tamaño" value = "3" checked>
+						<br><br>
+					@endif
 					<input type="submit" class="form-control" value="GUARDAR">
 				</form>
 			</div>	

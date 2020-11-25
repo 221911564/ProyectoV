@@ -35,6 +35,14 @@ Route::name('guardarp')->post('guardar/', 'ProductosController@guardar');
 Route::name('editarp')->get('editarp/{id}', 'ProductosController@editar');
 Route::name('salvarp')->put('salvap/{id}', 'ProductosController@salvar');
 
-// ---------------------VISTA EMPLEADOS--------------------
+//---------------------EDITAR PRODUCTOS------------------------------
+
+Route::name('borrarp')->get('borrarp/{id}', 'ProductosController@borrar');
+
+
+
+//<---------------    RUTAS USUARIOS     -------------------->
+
+// -------------------VISTA EMPLEADOS--------------------
 
 Route::name('usuario')->get('usuario/', 'UsuariosController@usuario');
