@@ -31,7 +31,7 @@ class ProductosController extends Controller{
         $img2 = $ldate . $img; 
 
     \Storage::disk('local')->put($img2, \File::get($file)); 
-    $usu = ProductosModel::create(array(
+    $prod = ProductosModel::create(array(
         'id_tam' => $request->input('id_tam'),
         'clave' => $request->input('clave'),
         'nombre' => $request->input('nombre'),
@@ -48,6 +48,7 @@ class ProductosController extends Controller{
         return view("productos.editar_producto")
             ->with(['prod' => $id]);
     }
+     //GUARDAR PRODUCTO
     public function salvar(ProductosModel $id, Request $request){
         if($request->file('img1') != ''){
             
@@ -74,6 +75,16 @@ class ProductosController extends Controller{
         
         return redirect()->route("producto");
        
+    }
+    // BUSCAR PRODUCTO
+    public function buscar(Request $request){
+
+        $query = ProductosModel::Buscar($request->get('buscar'))
+            ->orderBy('id_producto')
+            ->paginate();
+
+        return view("productos.productos")
+            ->with(['prods' => $query]);
     }
 
 

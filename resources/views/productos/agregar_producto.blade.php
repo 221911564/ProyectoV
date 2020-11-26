@@ -10,6 +10,9 @@
 			<div class="align-self-xl-center" data-wow-offset="50" data-wow-delay="0.9s">
 				<form action="{{ route('guardarp') }}" method="POST" name="nuevo" enctype="multipart/form-data">
 				{{ csrf_field() }}
+					<label>CLAVE</label>
+					<input type="text" name="clave" value="{{ old('clave') }}" class="form-control">
+					<p>@if($errors->first('clave')) <i class="form-control">{{$errors->first('clave')}}</i>@endif</p>
 					<label>NOMBRE</label>
 					<input type="text" name="nombre" value="{{ old('nombre') }}" class="form-control">
 					<p>@if($errors->first('nombre')) <i class="form-control">{{$errors->first('nombre')}}</i>@endif</p>

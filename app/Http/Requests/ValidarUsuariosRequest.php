@@ -24,7 +24,15 @@ class ValidarUsuariosRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'nombre' => 'required|min:3|max:40',
+            'app' => 'required',
+            'apm' => 'required',
+            'fn' => 'required|date',
+            'genero' => 'required',
+            'correo' => 'email',
+            'contrasena' => 'required',
+            'id_tipo' => 'required',
+            'activo' => 'required'
         ];
     }
 }

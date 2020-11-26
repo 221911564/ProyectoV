@@ -24,6 +24,7 @@ class ValidarProductoRequest extends FormRequest
     public function rules()
     {
         return [
+            'clave' => 'required|min:3|max:10',
             'nombre' => 'required|min:3|max:45',
             'precio' => 'required|numeric',
             'tamaño' => 'required|',
