@@ -8,7 +8,7 @@
 				</h2>
 			</div>
 			<div class="align-self-xl-center" data-wow-offset="50" data-wow-delay="0.9s">
-				<form action="{{ route('guardarp') }}" method="POST" name="nuevo" enctype="multipart/form-data">
+				<form action="{{ route('guardarp') }}" method="POST" name="guardarp" enctype="multipart/form-data">
 				{{ csrf_field() }}
 					<label>CLAVE</label>
 					<input type="text" name="clave" value="{{ old('clave') }}" class="form-control">

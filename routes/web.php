@@ -52,16 +52,14 @@ Route::name('usuario')->get('usuario/', 'UsuariosController@usuario');
 
 //---------------------ALTA USUARIOS------------------------------
 
-Route::name('nuevou')->get('nuevou/', 'UsuariosController@nuevo');
-Route::name('guardaru')->post('guardaru/', 'UsuariosController@guardar');
+Route::name('nuevo')->get('nuevo/', 'UsuariosController@nuevo');
+Route::name('guardar')->post('guardar/', 'UsuariosController@guardar');
 
 //---------------------EDITAR USUARIOS------------------------------
 
-Route::name('editaru')->get('editaru/{id}', 'UsuariosController@editar');
-Route::name('salvaru')->put('salvaru/{id}', 'UsuariosController@salvar');
+Route::name('editar')->get('editar/{id}', 'UsuariosController@editar');
+Route::name('salvar')->put('salvar/{id}', 'UsuariosController@salvar');
 
-// -------------------BUSQUEDA USUARIOS--------------------
-Route::name('buscaru')->get('buscaru/', 'UsuariosController@buscar');
 
 //---------------------BORRAR USUARIOS------------------------------
 

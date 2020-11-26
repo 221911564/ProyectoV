@@ -38,21 +38,19 @@ class UsuariosController extends Controller{
         $img2 = $ldate . $img; 
 
         \Storage::disk('local')->put($img2, \File::get($file)); 
-
-
-            $usu = UsuariosModel::create(array(
-                'nombre' => $request->input('nombre'),
-                'app' => $request->input('app'),
-                'apm' => $request->input('apm'),
-                'fn' => $request->input('fn'),
-                'genero' => $request->input('genero'),
-                'celular' => $request->input('celular'),
-                'correo' => $request->input('correo'),
-                'contrasena' => $request->input('contrasena'),
-                'img' => $img2,
-                'id_tipo' => $request->input('id_tipo'),
-                'activo' => 1
-            ));
+        $usu = UsuariosModel::create(array(
+            'nombre'      => $request->input('nombre'),
+            'app'         => $request->input('app'),
+            'apm'         => $request->input('apm'),
+            'fn'          => $request->input('fn'),
+            'genero'      => $request->input('genero'),
+            'celular'     => $request->input('celular'),
+            'correo'      => $request->input('correo'),
+            'contrasena'  => $request->input('contrasena'),
+            'img'         => $img2,
+            'id_tipo'     => $request->input('id_tipo'),
+            'activo'      => 1
+        ));
            
             return redirect()->route('usuario');
         }
@@ -80,20 +78,19 @@ class UsuariosController extends Controller{
 
 
         $con = UsuariosModel::find($id->id_usuario);
-           $con -> nombre = $request -> nombre; 
-           $con -> app = $request -> app;
-           $con -> apm = $request -> apm;
-           $con -> fn = $request -> fn;
-           $con -> genero = $request -> genero; 
-           $con -> celular = $request -> celular;
-           $con -> correo = $request -> correo;
-           $con -> contrasena = $request -> contrasena;
-           $con -> img    = $img2; 
-           $con -> id_tipo = $request -> id_tipo;
-           $con -> activo = $request -> activo; 
-        $con -> save();
-        
-        return redirect()->route("usuario");
+        $con -> nombre = $request -> nombre; 
+        $con -> app = $request -> app; 
+        $con -> apm = $request -> apm; 
+        $con -> fn = $request -> fn; 
+        $con -> genero = $request -> genero; 
+        $con -> celular = $request -> celular;
+        $con -> correo = $request -> correo; 
+        $con -> contrasena = $request -> contrasena;  
+        $con -> img = $img2;
+        $con -> activo = $request -> activo; 
+     $con -> save();
+     
+     return redirect()->route("usuario");
        
     }
     

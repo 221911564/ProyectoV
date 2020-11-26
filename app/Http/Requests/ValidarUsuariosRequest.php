@@ -31,8 +31,7 @@ class ValidarUsuariosRequest extends FormRequest
             'genero' => 'required',
             'correo' => 'email',
             'contrasena' => 'required',
-            'id_tipo' => 'required',
-            'activo' => 'required'
+            'id_tipo' => 'required'
         ];
     }
 }

@@ -8,7 +8,7 @@
 				</h2>
 			</div>
 			<div class="align-self-xl-center" data-wow-offset="50" data-wow-delay="0.9s">
-                <form action="{{ route('salvaru', ['id' => $usu->id_usuario]) }}" method="POST" name="editar" enctype="multipart/form-data">
+                <form action="{{ route('salvar', ['id' => $usu->id_usuario]) }}" method="POST" name="salvar" enctype="multipart/form-data">
                 {{ csrf_field() }}
                 {{ method_field('PUT') }}
                     <label>NOMBRE</label>
@@ -20,13 +20,13 @@
                     <label>FECHA DE NACIMIENTO</label>
 					<input type="date" name="fn" value="{{ $usu->fn }}" class="form-control">
                     <label>GENERO:</label><br>
-					@if($usu->genero == 2)
-						Femenino<input type="radio" name="tamaño" value = "2" checked>
-						Masculino<input type="radio" name="tamaño" value = "1">
+					@if($usu->genero == 1)
+						Masculino<input type="radio" name="genero" value = "1" checked>
+						Femenino<input type="radio" name="genero" value = "2">
 						<br><br>
-					@elseif($usu->genero == 1)
-                        Femenino<input type="radio" name="tamaño" value = "2">
-						Masculino<input type="radio" name="tamaño" value = "1" checked>
+					@else
+						Masculino<input type="radio" name="genero" value = "1">
+						Femenino<input type="radio" name="genero" value = "2" checked>
                         <br><br>
                     @endif
                     <label>CELULAR</label>
@@ -38,14 +38,14 @@
                     <label>IMAGEN</label>
 					<input type="file" name="img1" class="form-control">
                     <input type="text" name="img2" value="{{ $usu->img }}" class="form-control"><br>
-					<label>USUARIO:</label><br>
-					@if($usu->id_tipo == 1)
-						Administrador <input type="radio" name="id_tipo" value = "1" checked>
-						Empleado<input type="radio" name="tamaño" value = "2">
+					@if($usu->activo == 1)
+						Activo<input type="radio" name="activo" value = "1" checked>
+						Inactivo<input type="radio" name="activo" value = "2">
 						<br><br>
-                    @elseif($usu->id_tipo == 2)
-						Administrador <input type="radio" name="id_tipo" value = "1">
-						Empleado<input type="radio" name="tamaño" value = "2" checked>
+					@else
+						Activo<input type="radio" name="activo" value = "1">
+						Inactivo<input type="radio" name="activo" value = "0" checked>
+						<br><br>
 					@endif
 					<input type="submit" class="form-control" value="GUARDAR">
 				</form>

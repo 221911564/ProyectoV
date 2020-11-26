@@ -5,7 +5,7 @@
 		<div class="container">
 			<div class="row">
 				<div>
-                    <a href="{{ route('nuevou') }}"><h3 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s"><span>Agregar Empleado</span></h3></a>
+                    <a href="{{ route('nuevo') }}"><h3 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s"><span>Agregar Empleado</span></h3></a>
 	    		</div>
 				<div class="col">
 					<h2 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s">DISATOY'S <span>USUARIOS</span></h2>
@@ -72,7 +72,7 @@
 							</h3>
 						</div>
 						<div class="col-md-2">
-							<a href="{{ route('editaru', ['id' => $usu->id_usuario]) }}">Editar</a></h4>
+							<a href="{{ route('editar', ['id' => $usu->id_usuario]) }}">Editar</a></h4>
                                 <form action="{{ route('borraru', ['id' => $usu->id_usuario]) }}" method="GET" name="borrar">
                                     {{ csrf_field() }}
                                     {{ method_field('DELETE') }}

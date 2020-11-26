@@ -32,7 +32,6 @@ class ProductosController extends Controller{
 
     \Storage::disk('local')->put($img2, \File::get($file)); 
     $prod = ProductosModel::create(array(
-        'id_tam' => $request->input('id_tam'),
         'clave' => $request->input('clave'),
         'nombre' => $request->input('nombre'),
         'precio' => $request->input('precio'),

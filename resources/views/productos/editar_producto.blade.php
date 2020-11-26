@@ -8,7 +8,7 @@
 				</h2>
 			</div>
 			<div class="align-self-xl-center" data-wow-offset="50" data-wow-delay="0.9s">
-                <form action="{{ route('salvarp', ['id' => $prod->id_producto]) }}" method="POST" name="editar" enctype="multipart/form-data">
+                <form action="{{ route('salvarp', ['id' => $prod->id_producto]) }}" method="POST" name="salvarp" enctype="multipart/form-data">
                 {{ csrf_field() }}
                 {{ method_field('PUT') }}
 					<label>NOMBRE</label>
