@@ -33,6 +33,7 @@ class ProductosController extends Controller{
     \Storage::disk('local')->put($img2, \File::get($file)); 
     $usu = ProductosModel::create(array(
         'id_tam' => $request->input('id_tam'),
+        'clave' => $request->input('clave'),
         'nombre' => $request->input('nombre'),
         'precio' => $request->input('precio'),
         'tamaño' => $request->input('tamaño'),
@@ -64,6 +65,7 @@ class ProductosController extends Controller{
 
 
         $con = ProductosModel::find($id->id_producto);
+           $con -> clave = $request -> clave;
            $con -> nombre = $request -> nombre; 
            $con -> precio = $request -> precio; 
            $con -> img    = $img2; 
