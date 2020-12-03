@@ -88,7 +88,6 @@ class ProductosController extends Controller{
             ->with(['prods' => $query]);
     }
 
-
     //BORRAR PRODUCTO
     public function borrar(ProductosModel $id){
         $id->delete();

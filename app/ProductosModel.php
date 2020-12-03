@@ -15,7 +15,6 @@ class ProductosModel extends Model{
             'img'
     ];
 
-
     public function scopeNombre($query, $nombre){
         if(trim($nombre) != ""){
             $query->where(\DB::raw("nombre"), "like", "%".$nombre."%");

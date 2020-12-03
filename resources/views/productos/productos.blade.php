@@ -28,7 +28,7 @@
                             Pequeño<input type="radio" name="tamaño" value="3">
                             Todos<input type="radio" name="tamaño" value="" checked>
                         </div>
-                        <div <div class="col-md-6">
+                        <div class="col-md-6">
                         <input type="submit" value="Buscar" class="form-control">
                         </div>
 

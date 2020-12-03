@@ -64,3 +64,6 @@ Route::name('salvar')->put('salvar/{id}', 'UsuariosController@salvar');
 //---------------------BORRAR USUARIOS------------------------------
 
 Route::name('borraru')->get('borraru/{id}', 'UsuariosController@borrar');
+
+// -------------------BUSQUEDA USUARIOS--------------------
+Route::name('buscaru')->get('buscaru/', 'UsuariosController@buscar');

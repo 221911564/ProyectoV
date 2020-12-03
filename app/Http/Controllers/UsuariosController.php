@@ -93,6 +93,23 @@ class UsuariosController extends Controller{
      return redirect()->route("usuario");
        
     }
+    // BUSCAR USUARIO
+    public function buscar(Request $request){
+        $tipos = TiposModel::all();
+
+        $query = UsuariosModel::Nombre($request->get('nombre'))
+            ->Tipo($request->get('tipo'))
+            ->Genero($request->get('genero'))
+            ->Fechas($request->get('fni'),$request->get('fnf'))
+            ->Activo($request->get('activo'))
+            ->Inactivo($request->get('inactivo'))
+            ->orderBy('id_usuario')
+            ->paginate();
+
+        return view("usuarios.usuarios")
+            ->with(['tipos' => $tipos])
+            ->with(['usus' => $query]);
+    }
     
         //BORRAR USUARIO
         public function borrar($id){
