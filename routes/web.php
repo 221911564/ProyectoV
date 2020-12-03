@@ -67,3 +67,8 @@ Route::name('borraru')->get('borraru/{id}', 'UsuariosController@borrar');
 
 // -------------------BUSQUEDA USUARIOS--------------------
 Route::name('buscaru')->get('buscaru/', 'UsuariosController@buscar');
+
+// -------------------LOGIN--------------------
+Route::name('login')->get('login/', 'LoginController@login');
+Route::name('enviar')->post('enviar/', 'LoginController@enviar');
+Route::name('logout')->get('logout/', 'LoginController@logout');

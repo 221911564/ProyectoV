@@ -71,6 +71,7 @@
 						</div>
 					</div>
 				</div>
+
 				@foreach($usus as $usu)
 				<div class="col" data-wow-offset="50" data-wow-delay="0.6s">
 					<div class="col-md-12" style="border: 2px solid #28a7e9">
