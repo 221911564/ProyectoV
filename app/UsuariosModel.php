@@ -23,7 +23,7 @@ class UsuariosModel extends Model
     ];
     public function scopeNombre($query, $nombre){
         if(trim($nombre) != ""){
-            $query->where(\DB::raw("nombre"), "like", "%".$nombre."%");
+            $query->where(\DB::raw("CONCAT(nombre,'', app, '', apm)"), "like", "%".$nombre."%");
         }
     }
 

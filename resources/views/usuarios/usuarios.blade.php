@@ -10,10 +10,10 @@
 				<div class="col">
 					<h2 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s">DISATOY'S <span>USUARIOS</span></h2>
 				</div>
-				<div>
-                    <form action="{{ route('buscaru')}}" method="GET" name="buscar">
+				<form action="{{ route('buscaru')}}" method="GET" name="buscar">
                         {{ csrf_field() }}
-                        <div class="col-md-4">
+					<div class="col-md-12">
+						<div class="col-md-4">
                             <h3 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s"><span>Nombre</span></h3>
                             <input type="text" class="form-control" name="nombre" value="{{ old('nombre') }}" placeholder="Busqueda por nombre">
                         </div>
@@ -32,17 +32,26 @@
                             Femenino<input type="radio" name="genero" value="2">
                             Todos<input type="radio" name="genero" value="" checked>
                         </div>
+					</div>
+					<div class="col-md-12">
 						<div class="col-md-4">
                             <h3 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s">Estatus<span></span></h3>
                             Activo<input type="radio" name="activo">
                             Inactivo<input type="radio" name="inactivo">
                         </div>
+						<div class="col-md-4">
+                            <h3 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s">Búsqueda por<span></span></h3>
+                            Fecha inicial<input type="date" name="fni" class="form-control">
+                        </div>
+						<div class="col-md-4">
+						<h3 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s">Fecha Nacimiento<span></span></h3>
+                            Fecha final<input type="date" name="fnf" class="form-control">
+                        </div>
+					</div>
                         <div class="col-md-4">
                         	<input type="submit" value="Buscar" class="form-control">
                         </div>
-                    </form>
-                </div>
-                <br>
+                </form>
 				<div class="col" data-wow-offset="50" data-wow-delay="0.6s">
 					<div class="col-md-12" style="border: 2px solid #28a7e9">
 						<div class="col-md-2">
