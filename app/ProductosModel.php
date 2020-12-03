@@ -16,9 +16,21 @@ class ProductosModel extends Model{
     ];
 
 
-    public function scopeBuscar($query, $buscar){
-        if(trim($buscar) != ""){
-            $query->where(\DB::raw("nombre"), "like", "%$buscar");
+    public function scopeNombre($query, $nombre){
+        if(trim($nombre) != ""){
+            $query->where(\DB::raw("nombre"), "like", "%".$nombre."%");
+        }
+    }
+
+    public function scopeTamano($query, $tamano){
+        if($tamano != ""){
+            $query->where("tamaño",$tamano);
+        }
+    }
+
+    public function scopeClave($query, $clave){
+        if(trim($clave) != ""){
+            $query->where(\DB::raw("clave"), "like", "%".$clave."%");
         }
     }
 

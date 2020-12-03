@@ -15,28 +15,18 @@
                         {{ csrf_field() }}
                         <div class="col-md-4">
                             <h3 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s"><span>Nombre</span></h3>
-                            <input type="text" class="form-control" name="buscar" value="{{ old('buscar') }}" placeholder="Busqueda por nombre">
+                            <input type="text" class="form-control" name="nombre" value="{{ old('nombre') }}" placeholder="Busqueda por nombre">
                         </div>
                         <div class="col-md-4">
                             <h3 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s">Clave<span></span></h3>
-                            <input type="text" class="form-control" name="nombre" value="{{ old('nombre') }}" placeholder="Busqueda por clave">
+                            <input type="text" class="form-control" name="clave" value="{{ old('clave') }}" placeholder="Busqueda por clave">
                         </div>
                         <div class="col-md-4">
                             <h3 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s">Tamaño<span></span></h3>
-                            <select class="form-control" name="tamaño">
-                                <option value="">Selecciona una opcion</option>;
-                                    @foreach($prods as $prod)
-                                    <option value="{$prod['tamaño']}">
-                                    @if($prod->tamaño == 1)
-                                        Grande
-                                    @elseif($prod->tamaño == 2)
-                                        Mediano
-                                    @elseif($prod->tamaño == 3)
-                                        Pequeño
-                                    @endif
-                                    </option>
-                                    @endforeach
-                            </select>
+                            Grande<input type="radio" name="tamaño" value="1">
+                            Mediano<input type="radio" name="tamaño" value="2">
+                            Pequeño<input type="radio" name="tamaño" value="3">
+                            Todos<input type="radio" name="tamaño" value="" checked>
                         </div>
                         <div <div class="col-md-6">
                         <input type="submit" value="Buscar" class="form-control">

@@ -78,7 +78,9 @@ class ProductosController extends Controller{
     // BUSCAR PRODUCTO
     public function buscar(Request $request){
 
-        $query = ProductosModel::Buscar($request->get('buscar'))
+        $query = ProductosModel::Nombre($request->get('nombre'))
+            ->Tamano($request->get('tamaño'))
+            ->Clave($request->get('clave'))
             ->orderBy('id_producto')
             ->paginate();
 
