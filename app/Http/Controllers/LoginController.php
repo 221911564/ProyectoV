@@ -17,6 +17,11 @@ class LoginController extends Controller
 
     public function enviar(Request $request){
 
+        $this->validate($request,[
+            'correo' => 'required|min:6|max:30|email',
+            'contrasena' => 'required|min:6|max:30'
+        ]);
+
         $correo = $request->input('correo');
         $pass = $request->input('contrasena');
 

@@ -12,8 +12,10 @@
 				{{ csrf_field() }}
                     <label>CORREO</label>
 					<input type="email" name="correo" value="{{ old('correo') }}" class="form-control">
+					<p>@if($errors->first('correo')) <i class="form-control">{{$errors->first('correo')}}</i>@endif</p>
                     <label>CONTRASEÑA</label>
 					<input type="password" name="contrasena" value="{{ old('contrasena') }}" class="form-control">
+					<p>@if($errors->first('contrasena')) <i class="form-control">{{$errors->first('contrasena')}}</i>@endif</p>
 					<input type="submit" class="form-control" value="INGRESAR">
 				</form>
 			</div>
