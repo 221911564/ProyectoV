@@ -15,10 +15,9 @@ class LoginController extends Controller
         return view('login.login');
     }
 
-    public function enviar(Request $request){
-
+    public function valida(Request $request){
         $this->validate($request,[
-            'correo' => 'required|min:6|max:30|email',
+            'correo' => 'required|email',
             'contrasena' => 'required|min:6|max:30'
         ]);
 
@@ -30,7 +29,8 @@ class LoginController extends Controller
             ->get();
 
         if(count($consulta) == 0){
-            return view('login.login');
+            return redirect()->route('login')
+                ->with('message','¡Datos incorrectos!');
         }
         else{
             $request->session()->put('session_id', $consulta[0]->id_usuario);

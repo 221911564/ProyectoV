@@ -70,5 +70,5 @@ Route::name('buscaru')->get('buscaru/', 'UsuariosController@buscar');
 
 // -------------------LOGIN--------------------
 Route::name('login')->get('login/', 'LoginController@login');
-Route::name('enviar')->post('enviar/', 'LoginController@enviar');
+Route::name('valida')->get('valida/', 'LoginController@valida');
 Route::name('logout')->get('logout/', 'LoginController@logout');

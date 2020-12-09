@@ -7,7 +7,7 @@
 			<div class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="{{ route('home') }}" class="fa fa-home"> INICIO</a></li>
-					<li><a href="{{ route('usuario') }}" class="fa fa-users"> USUARIOS</a></li>
+					<li><a href="{{ route('usuario') }}" class="fa fa-user"> MI PERFIL</a></li>
 					<li><a href="{{ route('producto') }}" class="fa fa-twitter"> PRODUCTOS</a></li>
 					<li><a href="{{ route('conocenos') }}" class="fa fa-institution"> CONÓCENOS</a></li>
 					<li><a href="#" class="fa fa-laptop"> VENTAS</a></li>

@@ -11,10 +11,10 @@
 				</div>
             <div class="col-md-4"></div>
 			<div class="col-md-5" data-wow-offset="50" data-wow-delay="0.9s">
-				<form action="{{ route('enviar') }}" method="POST" name="guardar">
+				<form action="{{ route('valida') }}" method="GET" name="guardar">
 				{{ csrf_field() }}
                     <label>CORREO</label>
-					<input type="email" name="correo" value="{{ old('correo') }}" class="form-control">
+					<input type="text" name="correo" value="{{ old('correo') }}" class="form-control">
 					<p>@if($errors->first('correo')) <i class="form-control">{{$errors->first('correo')}}</i>@endif</p>
                     <label>CONTRASEÑA</label>
 					<input type="password" name="contrasena" value="{{ old('contrasena') }}" class="form-control">
