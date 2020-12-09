@@ -1,8 +1,11 @@
-@extends('layouts.layout')
+@extends('layouts.empleado')
 
     @section('contenido')
 	<section id="contact">
 		<div class="container">
+			<div>
+			    <a href="{{ route('home') }}"><h3 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s"><span>Regresar</span></h3></a>
+			</div>
             <div class="col">
 					<h2 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s"><span>Iniciar Sesión</span></h2>
 				</div>

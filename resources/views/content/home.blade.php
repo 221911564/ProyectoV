@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layouts.empleado')
 
     @section('contenido')
 	<section id="home">
@@ -12,7 +12,7 @@
                         <div class="sub-element">Peluchería en Vanguardia</div>
                     </div>
                     <br>
-					<a data-scroll href="#" class="btn btn-default" data-wow-offset="50" data-wow-delay="0.6s">Iniciar Sesión</a>
+					<a data-scroll href="{{ route('login') }}" class="btn btn-default" data-wow-offset="50" data-wow-delay="0.6s">Iniciar Sesión</a>
 				</div>
 			</div>
 		</div>
@@ -22,7 +22,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<h2 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s"><span>AWESOME</span> PORTFOLIO
+					<h2 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s"><span>DISA</span>TOYS
 					</h2>
 				</div>
 				<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="0.6s">
