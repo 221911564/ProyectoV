@@ -20,9 +20,9 @@
                         <div class="col-md-4">
                             <h3 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s">Tipo<span></span></h3>
 							<select name="tipo" class="form-control">
-            				    <option value="">Selecciona una opcion</option>
+            				    <option style="color: black;" value="">Selecciona una opcion</option>
             				    @foreach($tipos as $tipo)
-            				        <option value="{{ $tipo->id_tipo }}">{{ $tipo->nombre }}</option>
+            				        <option style="color: black;" value="{{ $tipo->id_tipo }}">{{ $tipo->nombre }}</option>
             				    @endforeach
             				</select>
                         </div>

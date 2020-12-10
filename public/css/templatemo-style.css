@@ -414,6 +414,11 @@ header .social-icon li a
 	{
 		font-weight: 500;
 	}
+#contact select
+{
+	background: transparent;
+	color: #fff;
+}
 #contact input
 	{
 		height: 50px;
