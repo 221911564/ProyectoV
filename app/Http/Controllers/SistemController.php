@@ -16,4 +16,8 @@ class SistemController extends Controller{
     public function conocenos(){
         return view('content.conocenos');
     }
+    // INDEX
+    public function index(){
+        return view('content.index');
+    }
 }

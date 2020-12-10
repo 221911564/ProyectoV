@@ -21,6 +21,7 @@ Route::name('home')->get('home/', 'SistemController@home');
 // ---------------------CONOCENOS--------------------
 
 Route::name('conocenos')->get('conocenos/', 'SistemController@conocenos');
+Route::name('index')->get('index/', 'SistemController@index');
 // ---------------------VISTA PRODUCTOS--------------------
 
 Route::name('producto')->get('producto/', 'ProductosController@producto');
@@ -96,4 +97,4 @@ Route::name('empleados')->get('empleados/', 'LoginController@empleado');
 //---------------------EDITAR PERFIL EMPLEADO------------------------------
 
 Route::name('editaremp')->get('editaremp/{id?}', 'EmpleadosController@editar');
-Route::name('salvaremp')->put('salvaemp/{id}', 'EmpleadosController@salvar');
+Route::name('salvaremp')->put('salvaemp/{id}', 'EmpleadosController@salvaremp');

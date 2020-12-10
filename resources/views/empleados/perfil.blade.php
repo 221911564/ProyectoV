@@ -5,7 +5,7 @@
 	    <div class="container">
 	    	<div class="row">
                 <div>
-                    <a href="{{ route('editarper')}}"><h3 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s"><span>Editar Perfil</span></h3></a>
+                    <a href="{{ route('editaremp')}}"><h3 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s"><span>Editar Perfil</span></h3></a>
 	    		</div>
                 <div class="col-md-12">
 			    	<h2 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s"><span>Perfil</span>

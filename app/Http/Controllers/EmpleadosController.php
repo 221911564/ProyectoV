@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Auth;
+use App\UsuariosModel;
 
 class EmpleadosController extends Controller
 {
@@ -14,11 +16,11 @@ class EmpleadosController extends Controller
         }
         $id = UsuariosModel::find(session('session_id'));
         
-        return view('usuarios.editar_perfil')
+        return view('empleados.editar_perfil')
             ->with(['usu' => $id]);
     }
     //GUARDAR PERFIL
-    public function salvar(UsuariosModel $id, Request $request){
+    public function salvaremp(UsuariosModel $id, Request $request){
         if($request->file('img1') != ''){
             
             $file = $request->file('img1');

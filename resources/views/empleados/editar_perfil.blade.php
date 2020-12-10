@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layouts.layou')
 
     @section('contenido')
 	<section id="contact">
@@ -8,7 +8,7 @@
 				</h2>
 			</div>
 			<div class="align-self-xl-center" data-wow-offset="50" data-wow-delay="0.9s">
-                <form action="{{ route('salvaremp', ['id' => $usu->id_usuario]) }}" method="POST" name="salvar" enctype="multipart/form-data">
+                <form action="{{ route('salvaremp', ['id' => $usu->id_usuario]) }}" method="POST" name="salvaremp" enctype="multipart/form-data">
                 {{ csrf_field() }}
                 {{ method_field('PUT') }}
                     <label>NOMBRE</label>
