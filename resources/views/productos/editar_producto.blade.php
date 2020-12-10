@@ -3,6 +3,9 @@
     @section('contenido')
 	<section id="contact">
 		<div class="container">
+			<div>
+        	    <a href="{{ route('producto')}}"><h3 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s"><span>Regresar</span></h3></a>
+	    	</div>
 			<div class="col-md-12">
 				<h2 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s">Edita el <span> producto</span>
 				</h2>
@@ -11,6 +14,8 @@
                 <form action="{{ route('salvarp', ['id' => $prod->id_producto]) }}" method="POST" name="salvarp" enctype="multipart/form-data">
                 {{ csrf_field() }}
                 {{ method_field('PUT') }}
+					<label>CLAVE</label>
+					<input name="clave" value="{{ $prod->clave }}" class="form-control">
 					<label>NOMBRE</label>
 					<input type="text" name="nombre" value="{{ $prod->nombre }}" class="form-control">
 					<label>PRECIO</label>

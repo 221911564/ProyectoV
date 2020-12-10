@@ -51,11 +51,10 @@
                         <tr>
                             <th scope="row" style="border: 2px solid #28a7e9"><h3>{{$prod->clave}}</h3></th>
                             <td style="border: 2px solid #28a7e9">
-                            <br>
                                 @if($prod->img == null)
-                                <img src="{{ asset('images/no-image.png') }}" alt="img"  width="150">
+                                    <img src="{{ asset('images/no-image.png') }}" alt="img"  width="100">
                                 @else
-                                    <img src="{{ asset('images/'.$prod->img) }}" alt="{{ $prod->img }}"  width="150">
+                                    <img src="{{ asset('images/'.$prod->img) }}" alt="{{ $prod->img }}"  width="100">
                                 @endif
                             </td>
                             <td style="border: 2px solid #28a7e9"><h3>{{$prod->nombre}}</h3></td>
@@ -70,16 +69,11 @@
                                 @endif
                             </h3>
                             <td style="border: 2px solid #28a7e9"><h4>
-                                <form action="{{ route('detallep', ['id' => $prod->id_producto]) }}" method="GET" name="editar">
+                                <form action="{{ route('editarp', ['id' => $prod->id_producto]) }}" method="GET" name="editar">
 					                <input type="submit" class="form-control" value="Detalle">
 				                </form>
                                 <form action="{{ route('editarp', ['id' => $prod->id_producto]) }}" method="GET" name="editar">
 					                <input type="submit" class="form-control" value="Editar">
-				                </form>
-                                <form action="{{ route('borrarp', ['id' => $prod->id_producto]) }}" method="GET" name="borrar">
-                                    {{ csrf_field() }}
-                                    {{ method_field('DELETE') }}
-					                <input type="submit" class="form-control" value="Borrar">
 				                </form>
                             </td>
                         </tr>

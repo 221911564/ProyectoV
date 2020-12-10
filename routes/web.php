@@ -24,11 +24,16 @@ Route::name('conocenos')->get('conocenos/', 'SistemController@conocenos');
 // ---------------------VISTA PRODUCTOS--------------------
 
 Route::name('producto')->get('producto/', 'ProductosController@producto');
+Route::name('productos')->get('productos/', 'ProductosController@productos');
 
 //---------------------ALTA PRODUCTOS------------------------------
 
 Route::name('nuevop')->get('nuevop/', 'ProductosController@nuevo');
 Route::name('guardarp')->post('guardarp/', 'ProductosController@guardar');
+
+//---------------------EDITAR PRODUCTOS------------------------------
+
+Route::name('detallep')->get('detallep/{id}', 'ProductosController@detalle');
 
 //---------------------EDITAR PRODUCTOS------------------------------
 

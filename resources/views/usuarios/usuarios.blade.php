@@ -78,9 +78,9 @@
 					<div></div>
 						<div class="col-md-2">
 							@if($usu->img == null)
-								<img src="{{ asset('images/no-user.jpg') }}" class="img-responsive" width="100">
+								<img src="{{ asset('images/no-user.jpg') }}" class="img-responsive" width="500">
 							@else
-								<img src="{{ asset('images/'.$usu->img) }}" alt="{{ $usu->img }}" class="img-responsive" width="100">
+								<img src="{{ asset('images/'.$usu->img) }}" alt="{{ $usu->img }}" class="img-responsive" width="500">
 							@endif
 						</div>
 						<div class="col-md-3">
@@ -115,8 +115,10 @@
 							@endif
 							</h3>
 						</div>
-						<div class="col-md-2">
-							<h4><a href="{{ route('editar', ['id' => $usu->id_usuario]) }}">Editar</a></h4>
+						<div class="col-md-2"><br>
+								<form action="{{ route('editar', ['id' => $usu->id_usuario]) }}" method="GET" name="editar">
+					                <input type="submit" class="form-control" value="Editar">
+				                </form>
                                 <form action="{{ route('borraru', ['id' => $usu->id_usuario]) }}" method="GET" name="borrar">
                                     {{ csrf_field() }}
                                     {{ method_field('DELETE') }}
