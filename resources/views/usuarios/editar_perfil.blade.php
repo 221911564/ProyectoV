@@ -4,11 +4,11 @@
 	<section id="contact">
 		<div class="container">
 			<div class="col-md-12">
-				<h2 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s">Edita el <span> usuario</span>
+				<h2 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s">Edita tu <span> perfil</span>
 				</h2>
 			</div>
 			<div class="align-self-xl-center" data-wow-offset="50" data-wow-delay="0.9s">
-                <form action="{{ route('salvar', ['id' => $usu->id_usuario]) }}" method="POST" name="salvar" enctype="multipart/form-data">
+                <form action="{{ route('salvarper', ['id' => $usu->id_usuario]) }}" method="POST" name="salvar" enctype="multipart/form-data">
                 {{ csrf_field() }}
                 {{ method_field('PUT') }}
                     <label>NOMBRE</label>

@@ -31,7 +31,7 @@ Route::name('productos')->get('productos/', 'ProductosController@productos');
 Route::name('nuevop')->get('nuevop/', 'ProductosController@nuevo');
 Route::name('guardarp')->post('guardarp/', 'ProductosController@guardar');
 
-//---------------------EDITAR PRODUCTOS------------------------------
+//---------------------DETALLE PRODUCTOS------------------------------
 
 Route::name('detallep')->get('detallep/{id}', 'ProductosController@detalle');
 
@@ -46,6 +46,8 @@ Route::name('buscarp')->get('buscarp/', 'ProductosController@buscar');
 //---------------------BORRAR PRODUCTOS------------------------------
 
 Route::name('borrarp')->get('borrarp/{id}', 'ProductosController@borrar');
+
+
 
 
 
@@ -77,3 +79,13 @@ Route::name('buscaru')->get('buscaru/', 'UsuariosController@buscar');
 Route::name('login')->get('login/', 'LoginController@login');
 Route::name('valida')->get('valida/', 'LoginController@valida');
 Route::name('logout')->get('logout/', 'LoginController@logout');
+
+//---------------------PERFIL------------------------------
+
+Route::name('administrador')->get('administrador/', 'LoginController@administrador');
+Route::name('perfil')->get('perfil/{id}', 'LoginController@perfil');
+
+//---------------------EDITAR PERFIL------------------------------
+
+Route::name('editarper')->get('editarper/{id?}', 'AccionesController@editar');
+Route::name('salvarper')->put('salvaper/{id}', 'AccionesController@salvar');

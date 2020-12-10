@@ -42,8 +42,7 @@ class LoginController extends Controller
             $session_tipo = $request->session()->get('session_tipo');
             
             if($session_tipo == 1){
-                //return view('administrador');
-                return 'admin';
+                return redirect()->route('administrador');
             } else {
                 if($session_tipo == 2){
                     //return view('empleados');
@@ -57,5 +56,17 @@ class LoginController extends Controller
         $request->session()->forget('session_name');
 
         return view('login.login');
+    }
+
+    //RUTA ADMINISTRADOR
+
+    public function administrador(Request $request){
+        if(empty($request->session()->get('session_id'))){
+            return redirect('login');
+        }
+        $usu = UsuariosModel::find(session('session_id'));
+        
+        return view('usuarios.perfil')
+            ->with(['usu' => $usu]);
     }
 }
