@@ -19,18 +19,24 @@
                                 <img src="{{ asset('images/'.$usu->img) }}" alt="{{ $usu->img }}"  width="150">
                             </td>
                             <td class="col-md-5">
-                            <h4><b>Clave: </b>{{($usu->clave)}}</h4><br>
-                            <h4><b>Nombre: </b>{{($usu->nombre)}}</h4><br>
+                            <h4><b>@if($usu->id_tipo == 1)
+                                    Administrador
+                                    @elseif($usu->id_tipo == 2)
+                                    Empleado
+                                    @endif</b></h4><br>
+                            <h4><b>Nombre: </b>{{($usu->nombre)}} {{($usu->app)}} {{($usu->apm)}}</h4><br>
+                            <h4><b>Correo: </b>{{($usu->correo)}}</h4><br>
                             </td>
                             <td class="col-md-5">
-                            <h4><b>Precio: $</b>{{($usu->precio)}}</h4><br>
-                                <h4><b>Tamaño: </b>
+                            <h4><b>Fecha de Nacimiento: </b>{{($usu->fn)}}</h4><br>
+                                <h4><b>Genéro: </b>
                                     @if($usu->genero == 1)
-                                        Grande
+                                    Masculino
                                     @elseif($usu->genero == 2)
-                                        Mediano
+                                    Femenino
                                     @endif
                                 </h4><br>
+                                <h4><b>Celular: </b>{{($usu->celular)}}</h4><br>
                             </td>
                         </tr>
                     </tbody>
