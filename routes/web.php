@@ -80,12 +80,20 @@ Route::name('login')->get('login/', 'LoginController@login');
 Route::name('valida')->get('valida/', 'LoginController@valida');
 Route::name('logout')->get('logout/', 'LoginController@logout');
 
-//---------------------PERFIL------------------------------
+//---------------------PERFIL ADMINISTRADOR------------------------------
 
 Route::name('administrador')->get('administrador/', 'LoginController@administrador');
-Route::name('perfil')->get('perfil/{id}', 'LoginController@perfil');
 
-//---------------------EDITAR PERFIL------------------------------
+//---------------------EDITAR PERFIL ADMINISTRADOR------------------------------
 
 Route::name('editarper')->get('editarper/{id?}', 'AccionesController@editar');
 Route::name('salvarper')->put('salvaper/{id}', 'AccionesController@salvar');
+
+//---------------------PERFIL EMPLEADO------------------------------
+
+Route::name('empleados')->get('empleados/', 'LoginController@empleado');
+
+//---------------------EDITAR PERFIL EMPLEADO------------------------------
+
+Route::name('editaremp')->get('editaremp/{id?}', 'EmpleadosController@editar');
+Route::name('salvaremp')->put('salvaemp/{id}', 'EmpleadosController@salvar');
