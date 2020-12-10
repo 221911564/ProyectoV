@@ -4,14 +4,11 @@
 	<section id="contact">
 	    <div class="container">
 	    	<div class="row">
-                <div>
-                    <a href="{{ route('nuevop')}}"><h3 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s"><span>Agregar Producto</span></h3></a>
-	    		</div>
 	    		<div class="col-md-12">
 	    			<h2 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s"><span>DISATOY'S</span> PRODUCTOS</h2>
                 </div>
                 <div>
-                    <form action="{{ route('buscarp')}}" method="GET" name="buscar">
+                    <form action="{{ route('buscar')}}" method="GET" name="buscar">
                         {{ csrf_field() }}
                         <div class="col-md-4">
                             <h3 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s"><span>Nombre</span></h3>
@@ -69,10 +66,10 @@
                                 @endif
                             </h3>
                             <td style="border: 2px solid #28a7e9"><h4>
-                                <form action="{{ route('editarp', ['id' => $prod->id_producto]) }}" method="GET" name="editar">
+                                <form action="{{ route('detalle', ['id' => $prod->id_producto]) }}" method="GET" name="editar">
 					                <input type="submit" class="form-control" value="Detalle">
 				                </form>
-                                <form action="{{ route('editarp', ['id' => $prod->id_producto]) }}" method="GET" name="editar">
+                                <form action="{{ route('editarpr', ['id' => $prod->id_producto]) }}" method="GET" name="editar">
 					                <input type="submit" class="form-control" value="Editar">
 				                </form>
                             </td>

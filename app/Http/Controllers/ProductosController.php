@@ -54,6 +54,12 @@ class ProductosController extends Controller{
             ->with(['prod' => $id]);
     }
 
+    //DETALLE PRODUCTO EMPLEADO
+    public function detalleP(ProductosModel $id){
+        return view("productos.detalle")
+            ->with(['prod' => $id]);
+    }
+
 
     //EDITAR PRODUCTO
     public function editar(ProductosModel $id){
@@ -100,6 +106,51 @@ class ProductosController extends Controller{
         return view("productos.productos")
             ->with(['prods' => $query]);
     }
+        //EDITAR PRODUCTO
+        public function editarp(ProductosModel $id){
+            return view("productos.editarp")
+                ->with(['prod' => $id]);
+        }
+         //GUARDAR PRODUCTO
+        public function salvarp(ProductosModel $id, Request $request){
+            if($request->file('img1') != ''){
+                
+                $file = $request->file('img1');
+                $img = $file->getClientOriginalName();
+        
+                $ldate = date('Ymd_His_');
+                $img2 = $ldate . $img;
+    
+                \Storage::disk('local')->put($img2, \File::get($file));
+            }
+            else{
+                $img2 = $request->img2; 
+            }
+    
+    
+            $con = ProductosModel::find($id->id_producto);
+               $con -> clave = $request -> clave;
+               $con -> nombre = $request -> nombre; 
+               $con -> precio = $request -> precio; 
+               $con -> img    = $img2; 
+               $con -> tamaño = $request -> tamaño; 
+            $con -> save();
+            
+            return redirect()->route("productos");
+           
+        }
+        // BUSCAR PRODUCTO
+        public function buscarp(Request $request){
+    
+            $query = ProductosModel::Nombre($request->get('nombre'))
+                ->Tamano($request->get('tamaño'))
+                ->Clave($request->get('clave'))
+                ->orderBy('id_producto')
+                ->paginate();
+    
+            return view("productos.productos_empleados")
+                ->with(['prods' => $query]);
+        }
 
     //BORRAR PRODUCTO
     public function borrar(ProductosModel $id){

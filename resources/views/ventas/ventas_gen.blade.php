@@ -1,4 +1,4 @@
-@extends('layouts.layou')
+@extends('layouts.layout')
 
     @section('contenido')
 	<section id="contact">
@@ -8,8 +8,8 @@
 			    	<h2 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s"><span>Ventas</span>
 			    	</h2>
 			    </div><br>
-                <h3><b>Empleado: </b> {{ $usuario->app." ".$usuario->apm.", ".$usuario->nombre }}</h3><hr>
-                <form action="{{ route('guardarv') }}" method="POST">
+                <h3><b>Administrador: </b> {{ $usuario->app." ".$usuario->apm.", ".$usuario->nombre }}</h3><hr>
+                <form action="{{ route('guardarve') }}" method="POST">
                     {{ csrf_field() }}
                     <table class="table">
                         <tbody style="border: 2px solid #28a7e9">
@@ -71,6 +71,51 @@
                                     <input type="hidden" name="total" value=" {{$total= $total + ($venta->cantidad * $prod1->precio)}} ">
                                 </tr>
                                 @endif
+                            @endforeach
+                        @endforeach
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Venta Total</td>
+                            <td style="border: 2px solid #28a7e9">$ {{$total}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br><br>
+                <hr style="border: 2px solid #28a7e9">
+                <br>
+                <div class="col-md-12">
+			    	<h2 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s"><span>Ventas Realizadas</span>
+			    	</h2>
+			    </div><br>
+                <table class="table">
+                    <tbody style="border: 2px solid #28a7e9">
+                        <tr style="border: 2px solid #28a7e9">
+                            <td style="border: 2px solid #28a7e9">N° de Venta</td>
+                            <td style="border: 2px solid #28a7e9">Codigo del producto</td>
+                            <td style="border: 2px solid #28a7e9">Nombre del producto</td>
+                            <td style="border: 2px solid #28a7e9">Cantidad</td>
+                            <td style="border: 2px solid #28a7e9">Precio c/u</td>
+                            <td style="border: 2px solid #28a7e9">Total</td>
+                        </tr>
+                        <input type="hidden" name="total" value=" {{$total = 0}} ">
+                        @foreach($usuarios as $usu)
+                            @foreach($productos as $prod2)
+                                @foreach($ventas as $venta)
+                                    @if($venta->id_usuario == $usu->id_usuario && $venta->id_producto == $prod2->id_producto)
+                                    <tr>
+                                        <td style="border: 2px solid #28a7e9">{{$venta->id_venta}}</td>
+                                        <td style="border: 2px solid #28a7e9">{{$usu->app}}, {{$usu->nombre}}</td>
+                                        <td style="border: 2px solid #28a7e9">{{$prod2->nombre}}</td>
+                                        <td style="border: 2px solid #28a7e9">{{$venta->cantidad}}</td>
+                                        <td style="border: 2px solid #28a7e9">$ {{$prod2->precio}}</td>
+                                        <td style="border: 2px solid #28a7e9">$ {{$venta->cantidad * $prod2->precio}}</td>
+                                        <input type="hidden" name="total" value=" {{$total= $total + ($venta->cantidad * $prod2->precio)}} ">
+                                    </tr>
+                                    @endif
+                                @endforeach
                             @endforeach
                         @endforeach
                         <tr>

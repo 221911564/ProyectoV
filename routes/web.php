@@ -102,3 +102,19 @@ Route::name('salvaremp')->put('salvaemp/{id}', 'EmpleadosController@salvaremp');
 //---------------------REALIZAR VENTAS------------------------------
 Route::name('ventas')->get('ventas/', 'AccionesController@ventas');
 Route::name('guardarv')->post('guardarv/', 'AccionesController@guardarv');
+
+//---------------------VENTAS------------------------------
+Route::name('ventasg')->get('ventasg/', 'AccionesController@ventasg');
+Route::name('guardarve')->post('guardarve/', 'AccionesController@guardarve');
+
+//---------------------EDITAR PRODUCTOS------------------------------
+
+Route::name('editarpr')->get('editarpr/{id}', 'ProductosController@editarp');
+Route::name('salvarpr')->put('salvapr/{id}', 'ProductosController@salvarp');
+
+//---------------------DETALLE PRODUCTOS------------------------------
+
+Route::name('detalle')->get('detalle/{id}', 'ProductosController@detallep');
+
+// -------------------BUSQUEDA PRODUCTOS--------------------
+Route::name('buscar')->get('buscar/', 'ProductosController@buscarp');

@@ -84,4 +84,33 @@ class AccionesController extends Controller{
                 ));
             return redirect()->route('ventas');    
     }
+    public function ventasg(){
+        $usuario = UsuariosModel::find(session('session_id'));
+        $usuarios = UsuariosModel::all();
+
+        $productos = ProductosModel::all();
+        $ventas = VentasModel::all();
+
+        return view('ventas.ventas_gen')
+            ->with(['usuario' => $usuario])
+            ->with(['usuarios' => $usuarios])
+            ->with(['productos' => $productos])
+            ->with(['ventas' => $ventas]);
+
+    }
+
+    public function guardarve(Request $request){
+
+            $this->validate($request, [
+                    'id_producto' => 'required',
+                    'cantidad' => 'required|integer|min:1|max:100'
+                ]);
+            $usu = VentasModel::create(array(
+                    'id_usuario'=> session('session_id'),
+                    'fecha'=> date('Ymd'),
+                    'id_producto'=>$request->input('id_producto'),
+                    'cantidad'=>$request->input('cantidad'),
+                ));
+            return redirect()->route('ventasg');    
+    }
 }
