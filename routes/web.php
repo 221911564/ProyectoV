@@ -98,3 +98,7 @@ Route::name('empleados')->get('empleados/', 'LoginController@empleado');
 
 Route::name('editaremp')->get('editaremp/{id?}', 'EmpleadosController@editar');
 Route::name('salvaremp')->put('salvaemp/{id}', 'EmpleadosController@salvaremp');
+
+//---------------------REALIZAR VENTAS------------------------------
+Route::name('ventas')->get('ventas/', 'AccionesController@ventas');
+Route::name('guardarv')->post('guardarv/', 'AccionesController@guardarv');

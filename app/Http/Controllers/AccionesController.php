@@ -3,8 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+
 use Auth;
+
 use App\UsuariosModel;
+use App\ProductosModel;
+use App\VentasModel;
+use App\DetallesModel;
 
 class AccionesController extends Controller{
 
@@ -51,5 +56,32 @@ class AccionesController extends Controller{
      
      return redirect()->route('administrador', ['id'=>session('session_id')]);
        
+    }
+    public function ventas(){
+        $usuario = UsuariosModel::find(session('session_id'));
+
+        $productos = ProductosModel::all();
+        $ventas = VentasModel::all();
+
+        return view('ventas.ventas')
+            ->with(['usuario' => $usuario])
+            ->with(['productos' => $productos])
+            ->with(['ventas' => $ventas]);
+
+    }
+
+    public function guardarv(Request $request){
+
+            $this->validate($request, [
+                    'id_producto' => 'required',
+                    'cantidad' => 'required|integer|min:1|max:100'
+                ]);
+            $usu = VentasModel::create(array(
+                    'id_usuario'=> session('session_id'),
+                    'fecha'=> date('Ymd'),
+                    'id_producto'=>$request->input('id_producto'),
+                    'cantidad'=>$request->input('cantidad'),
+                ));
+            return redirect()->route('ventas');    
     }
 }
