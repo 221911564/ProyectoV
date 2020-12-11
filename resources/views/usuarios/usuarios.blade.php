@@ -7,6 +7,9 @@
 				<div>
                     <a href="{{ route('nuevo') }}"><h3 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s"><span>Agregar Empleado</span></h3></a>
 	    		</div>
+				<div>
+                    <a href="{{ route('reporte') }}"><h3 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s"><span>Reporte de usuarios</span></h3></a>
+	    		</div>
 				<div class="col">
 					<h2 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s">DISATOY'S <span>USUARIOS</span></h2>
 				</div>

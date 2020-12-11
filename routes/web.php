@@ -118,3 +118,8 @@ Route::name('detalle')->get('detalle/{id}', 'ProductosController@detallep');
 
 // -------------------BUSQUEDA PRODUCTOS--------------------
 Route::name('buscar')->get('buscar/', 'ProductosController@buscarp');
+
+
+//---------------------EXCEL USUARIOS------------------------------
+
+Route::name('reporte')->get('reporte/', 'ExcelController@excel');
