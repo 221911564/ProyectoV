@@ -215,7 +215,7 @@
 						<p class="address-title">ACERCATE Y UBÍCANOS</p>
 						<span>Fabricamos y distribuimos muñecos de peluche, con la mejor calidad y al menor precio posible. ​¡Para que tú ganes!</span>
 						<p><i class="fa fa-phone"></i> 722-020-0340</p>
-						<p><i class="fa fa-envelope-o"></i> al221910415@gmail.com</p>
+						<p><i class="fa fa-envelope-o"></i> eriksalazar3@gmail.com</p>
 						<p><i class="fa fa-map-marker"></i> 663 New Walk Roadside, Birdeye View, GO 11020</p>
 					</address>
 				</div>

@@ -9,18 +9,16 @@
     <center>
         <table>
             <tr>
-                <th> <img src="https://pelucheria.com/wp-content/uploads/2020/03/Pelucheria.com-logotipo-1536x1125.png"></th>
+                <th> <img src="https://pelucheria.com/wp-content/uploads/2020/03/Pelucheria.com-logotipo-1536x1125.png" width="100"></th>
             </tr>
             <tr>
-                <td>Buen día {{$nombre}},</td>
-                <td>{{$correo}}</td>
+                <td><h1>Buen día {{$nombre}}, Usuario: {{$correo}}</h1></td>
             </tr>
             <tr>
-                <td><h1>DISATOYS CONTACTO: {{$contacto}}</h1></td>
+                <td><h2>DISATOYS CONTACTO: {{$contacto}}</h2></td>
             </tr>
             <tr>
-                <td>Gracias por contactarse con nosotros, atenderemos su petición de la manera mas atenta y breve posible su mensaje: {{$mensaje}}</td>
-                <td>Siendo su asunto: {{$asunto}}</td>
+                <td><h3>Gracias por contactarse con nosotros, atenderemos su petición de la manera mas atenta y breve posible su mensaje: {{$mensaje}}</h3></td>
             </tr>
             <tr>
                 <td>Sin mas por el momento que tenga un excelente día. Gracias por su preferencia</td>
