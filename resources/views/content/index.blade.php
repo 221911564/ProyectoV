@@ -17,94 +17,88 @@
 		</div>
 	</section>
 
+	<!-- start portfolio -->
 	<section id="portfolio">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<h2 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s"><span>DISA</span>TOYS
+					<h2 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s"><span>DISATOYS</span> PRODUCTOS
 					</h2>
 				</div>
 				<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="0.6s">
 					<div class="portfolio-thumb">
-						<img src="images/portfolio-img1.jpg" class="img-responsive" alt="portfolio img 1">
+						<img src="images/as.jpg" class="img-responsive" alt="portfolio img 1">
 						<div class="portfolio-overlay">
-							<h4>Project One</h4>
+							<h4>DISATOYS</h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elitquisque tempus ac eget dia.</p>
-							<a href="#" class="btn btn-default">DETAIL</a>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="0.6s">
 					<div class="portfolio-thumb">
-						<img src="images/portfolio-img2.jpg" class="img-responsive" alt="portfolio img 2">
+						<img src="images/bs.jpg" class="img-responsive" alt="portfolio img 2">
 						<div class="portfolio-overlay">
-							<h4>Project Two</h4>
+							<h4>DISATOYS</h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elitquisque tempus ac eget dia.</p>
-							<a href="#" class="btn btn-default">DETAIL</a>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="0.6s">
 					<div class="portfolio-thumb">
-						<img src="images/portfolio-img3.jpg" class="img-responsive" alt="portfolio img 3">
+						<img src="images/cd.jpg" class="img-responsive" alt="portfolio img 3">
 						<div class="portfolio-overlay">
-							<h4>Project Three</h4>
+							<h4>DISATOYS</h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elitquisque tempus ac eget dia.</p>
-							<a href="#" class="btn btn-default">DETAIL</a>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="0.6s">
 					<div class="portfolio-thumb">
-						<img src="images/portfolio-img4.jpg" class="img-responsive" alt="portfolio img 4">
+						<img src="images/ds.jpg" class="img-responsive" alt="portfolio img 4">
 						<div class="portfolio-overlay">
-							<h4>Project Four</h4>
+							<h4>DISATOYS</h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elitquisque tempus ac eget dia.</p>
-							<a href="#" class="btn btn-default">DETAIL</a>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="0.6s">
 					<div class="portfolio-thumb">
-						<img src="images/portfolio-img3.jpg" class="img-responsive" alt="portfolio img 3">
+						<img src="images/es.jpg" class="img-responsive" alt="portfolio img 3">
 						<div class="portfolio-overlay">
-							<h4>Project Five</h4>
+							<h4>DISATOYS</h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elitquisque tempus ac eget dia.</p>
-							<a href="#" class="btn btn-default">DETAIL</a>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="0.6s">
 					<div class="portfolio-thumb">
-						<img src="images/portfolio-img4.jpg" class="img-responsive" alt="portfolio img 4">
+						<img src="images/qa.jpg" class="img-responsive" alt="portfolio img 4">
 						<div class="portfolio-overlay">
-							<h4>Project Six</h4>
+							<h4>DISATOYS</h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elitquisque tempus ac eget dia.</p>
-							<a href="#" class="btn btn-default">DETAIL</a>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="0.6s">
 					<div class="portfolio-thumb">
-						<img src="images/portfolio-img1.jpg" class="img-responsive" alt="portfolio img 1">
+						<img src="images/la.jpg" class="img-responsive" alt="portfolio img 1">
 						<div class="portfolio-overlay">
-							<h4>Project Seven</h4>
+							<h4>DISATOYS</h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elitquisque tempus ac eget dia.</p>
-							<a href="#" class="btn btn-default">DETAIL</a>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="0.6s">
 					<div class="portfolio-thumb">
-						<img src="images/portfolio-img2.jpg" class="img-responsive" alt="portfolio img 2">
+						<img src="images/oj.jpg" class="img-responsive" alt="portfolio img 2">
 						<div class="portfolio-overlay">
-							<h4>Project Eight</h4>
+							<h4>DISATOYS</h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elitquisque tempus ac eget dia.</p>
-							<a href="#" class="btn btn-default">DETAIL</a>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
+	<!-- end portfolio -->
     @endsection
