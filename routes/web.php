@@ -123,3 +123,7 @@ Route::name('buscar')->get('buscar/', 'ProductosController@buscarp');
 //---------------------EXCEL USUARIOS------------------------------
 
 Route::name('reporte')->get('reporte/', 'ExcelController@excel');
+
+//---------------------ENVIO DE CONTACTANOS------------------------------
+
+Route::name('correo')->post('correo/', 'CorreoController@correo');

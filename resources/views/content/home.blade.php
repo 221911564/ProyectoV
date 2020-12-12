@@ -196,15 +196,16 @@
 					</h2>
 				</div>
 				<div class="col-md-6 col-sm-6 col-xs-12 wow fadeInLeft" data-wow-offset="50" data-wow-delay="0.9s">
-					<form action="#" method="post">
+					<form action="{{ route('correo') }}" method="post">
+						{{ csrf_field() }}
 						<label>NOMBRE</label>
-						<input name="fullname" type="text" class="form-control" id="fullname">
+						<input name="nombre" type="text" class="form-control">
 
 						<label>CORREO</label>
-						<input name="email" type="email" class="form-control" id="email">
+						<input name="correo" type="email" class="form-control">
 
 						<label>DESCRIPCIÓN</label>
-						<textarea name="message" rows="4" class="form-control" id="message"></textarea>
+						<textarea name="mensaje" rows="4" class="form-control"></textarea>
 
 						<input type="submit" class="form-control">
 					</form>
