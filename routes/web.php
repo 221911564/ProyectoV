@@ -26,6 +26,7 @@ Route::name('index')->get('index/', 'SistemController@index');
 
 Route::name('producto')->get('producto/', 'ProductosController@producto');
 Route::name('productos')->get('productos/', 'ProductosController@productos');
+Route::name('products')->get('products/', 'ProductosController@products');
 
 //---------------------ALTA PRODUCTOS------------------------------
 
@@ -127,3 +128,20 @@ Route::name('reporte')->get('reporte/', 'ExcelController@excel');
 //---------------------ENVIO DE CONTACTANOS------------------------------
 
 Route::name('correo')->post('correo/', 'CorreoController@correo');
+
+//---------------------ALTA CLIENTES------------------------------
+
+Route::name('registro')->get('registro/', 'UsuariosController@registro');
+Route::name('guardar1')->post('guardar1/', 'UsuariosController@guardar1');
+
+//---------------------PERFIL EMPLEADO------------------------------
+
+Route::name('clientes')->get('clientes/', 'LoginController@clientes');
+
+//---------------------CARRITO DE COMPRAS------------------------------
+
+Route::post('/cart-add',    'CartController@add')->name('cart.add');
+
+Route::get('/cart-checkout','CartController@cart')->name('cart.checkout');
+Route::post('/cart-clear',  'CartController@clear')->name('cart.clear');
+Route::post('/cart-removeitem',  'CartController@removeitem')->name('cart.removeitem');

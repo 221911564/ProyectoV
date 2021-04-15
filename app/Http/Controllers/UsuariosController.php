@@ -7,6 +7,7 @@ use Illuminate\Support\Facade\DB;
 use App\UsuariosModel;
 use App\TiposModel;
 use App\Http\Requests\ValidarUsuariosRequest;
+use App\Http\Requests\ValidarClientesRequest;
 
 class UsuariosController extends Controller{
 
@@ -116,5 +117,38 @@ class UsuariosController extends Controller{
             $id = UsuariosModel::find($id);
             $id->delete();
             return redirect()->route('usuario');
+        }
+
+        // VISTA AGREGAR CLIENTE
+        public function registro(){
+        return view("usuarios.registro");
+        }
+
+
+        //GUARDAR INFORMACION
+
+    public function guardar1(ValidarClientesRequest $request){
+        $file = $request->file('img'); 
+
+        $img = $file->getClientOriginalName();
+
+        $ldate = date('Ymd_His_');
+        $img2 = $ldate . $img; 
+
+        \Storage::disk('local')->put($img2, \File::get($file)); 
+        $usu = UsuariosModel::create(array(
+            'nombre'      => $request->input('nombre'),
+            'app'         => $request->input('app'),
+            'apm'         => $request->input('apm'),
+            'fn'          => $request->input('fn'),
+            'genero'      => $request->input('genero'),
+            'celular'     => $request->input('celular'),
+            'correo'      => $request->input('correo'),
+            'contrasena'  => $request->input('contrasena'),
+            'img'         => $img2,
+            'id_tipo'     => 3,
+            'activo'      => 1
+        ));
+            return redirect()->route('login');
         }
 }

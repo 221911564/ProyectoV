@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Correo Distoys</title>
+    <title>Correo JAS COSMETICS}</title>
 </head>
 <body text=#CCCCCC>
     <center>
         <table>
             <tr>
-                <th> <img src="https://pelucheria.com/wp-content/uploads/2020/03/Pelucheria.com-logotipo-1536x1125.png" width="100"></th>
+                <th> <img src="images/m1.png" width="100"></th>
             </tr>
             <tr>
                 <td><h1>Buen día {{$nombre}}, Usuario: {{$correo}}</h1></td>
             </tr>
             <tr>
-                <td><h2>DISATOYS CONTACTO: {{$contacto}}</h2></td>
+                <td><h2>JAS COSMETICS: {{$contacto}}</h2></td>
             </tr>
             <tr>
                 <td><h3>Gracias por contactarse con nosotros, atenderemos su petición de la manera mas atenta y breve posible su mensaje: {{$mensaje}}</h3></td>

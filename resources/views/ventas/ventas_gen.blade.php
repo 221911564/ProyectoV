@@ -94,7 +94,7 @@
                     <tbody style="border: 2px solid #28a7e9">
                         <tr style="border: 2px solid #28a7e9">
                             <td style="border: 2px solid #28a7e9">N° de Venta</td>
-                            <td style="border: 2px solid #28a7e9">Codigo del producto</td>
+                            <td style="border: 2px solid #28a7e9">Nombre del Vendedor</td>
                             <td style="border: 2px solid #28a7e9">Nombre del producto</td>
                             <td style="border: 2px solid #28a7e9">Cantidad</td>
                             <td style="border: 2px solid #28a7e9">Precio c/u</td>

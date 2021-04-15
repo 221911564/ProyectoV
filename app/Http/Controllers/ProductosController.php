@@ -24,6 +24,13 @@ class ProductosController extends Controller{
             ->with(['prods' => $prods]);
     }
 
+    public function products(){
+        $prods = ProductosModel::all();
+
+        return view("productos.productos_cliente")
+            ->with(['prods' => $prods]);
+    }
+
     // AGREGAR PRODUCTO
     public function nuevo(){
         return view("productos.agregar_producto");
@@ -157,4 +164,6 @@ class ProductosController extends Controller{
         $id->delete();
         return redirect()->route('producto');
     }
+
+    
 }

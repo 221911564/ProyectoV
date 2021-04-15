@@ -1,0 +1,9 @@
+Administrador: 
+
+correo: eriksalazar3@gmail.com
+contraseña: 123456
+
+Empleado: 
+
+correo: juan@hotmail.com 
+contraseña: 123456

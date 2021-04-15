@@ -7,9 +7,9 @@
 			<div class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="{{ route('index') }}" class="fa fa-home"> INICIO</a></li>
-					<li><a href="{{ route('empleados') }}" class="fa fa-user"> MI PERFIL</a></li>
-					<li><a href="{{ route('productos') }}" class="fa fa-twitter"> PRODUCTOS</a></li>
-					<li><a href="{{ route('ventas') }}" class="fa fa-laptop"> VENTAS</a></li>
+					<li><a href="{{ route('clientes') }}" class="fa fa-user"> MI PERFIL</a></li>
+					<li><a href="{{ route('products') }}" class="fa fa-twitter"> PRODUCTOS</a></li>
+					<li><a href="{{ route('cart.checkout') }}" class="fa fa-shopping-cart"> MIS COMPRAS</a></li>
 					<li><a href="{{ route('logout') }}" class="fa fa-sign-out"> CERRAR SESIÓN</a></li>
 				</ul>
 			</div>

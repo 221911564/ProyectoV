@@ -43,10 +43,10 @@ class LoginController extends Controller
             
             if($session_tipo == 1){
                 return redirect()->route('administrador');
-            } else {
-                if($session_tipo == 2){
+            } else if($session_tipo == 2) { 
                     return redirect()->route('empleados');
-                }
+            }else if($session_tipo == 3) { 
+                return redirect()->route('clientes');
             }
         }
     }
@@ -75,6 +75,16 @@ class LoginController extends Controller
         $usu = UsuariosModel::find(session('session_id'));
         
         return view('empleados.perfil')
+            ->with(['usu' => $usu]);
+    }
+
+    public function clientes(Request $request){
+        if(empty($request->session()->get('session_id'))){
+            return redirect('login');
+        }
+        $usu = UsuariosModel::find(session('session_id'));
+        
+        return view('empleados.perfiles')
             ->with(['usu' => $usu]);
     }
 }

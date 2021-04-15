@@ -2,8 +2,7 @@
 <html lang="es-MX">
 	<head>
 		<meta charset="utf-8">
-		<title>
-		</title>
+		<title>DISATOY'S</title>
 		<meta name="keywords" content="">
 		<meta name="description" content="">
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -23,6 +22,7 @@
         <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
 <body>
     @include('layouts.preloader')
+    @include('layouts.menu_cliente')
     @yield('contenido')
     @include('layouts.footer')
 </body>
